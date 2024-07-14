@@ -1,0 +1,33 @@
+@page
+@model OrderModel
+
+<h3>MindSync Premium Subscription</h3>
+<p>Ads are how we can keep MindSync prices low and continue our important research. If you would prefer not to receive ads, please subscribe to MindSync Premium for only $1,999/mo.</p>
+<form method="post">
+    <!-- Display Data Validation Summary of all errors. Optional -->
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="SerialNumber" class="form-label"></label>
+        <input asp-for="SerialNumber" class="form-control">
+        <span asp-validation-for="SerialNumber" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="CreditCard" class="form-label"></label>
+        <input asp-for="CreditCard" class="form-control">
+        <span asp-validation-for="CreditCard" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@if (Model.Name != string.Empty)
+{
+    <p>Thank you @Model.Name for purchasing the ad-free tier for your MindSync with Serial Number #@Model.SerialNumber.</p>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
