@@ -66,7 +66,7 @@ public string Name {get; set;} = string.Empty;
 ## Task 4: Add Thank You Message
 1. After the form, add HTML/Razor Page code that displays a thank you message when the user successfully submits the form. The message should say "Thank you {Name} for purchasing the ad-free tier for your MindSync with Serial Number #{SerialNumber}.".
 2. Ensure that the thank you message only displays after the user successfully submits it the form. It should not display otherwise.
-3. Add a link to your razor page in the navigation menu of the web site by adding the correct HTML code to Pages\Shared_Layout.cshtml.
+3. Add a link to your razor page in the navigation menu of the web site by adding the correct HTML code to `Pages\Shared\_Layout.cshtml`.
 4. Your final web page after form submission should look like this image:
 
 ![Image of form](https://i.imgur.com/i8P6Yzm.png)
